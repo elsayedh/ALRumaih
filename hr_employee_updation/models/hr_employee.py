@@ -22,6 +22,7 @@
 ###################################################################################
 from datetime import datetime, timedelta
 from odoo import models, fields, _, api
+from .calverter import Calverter
 
 GENDER_SELECTION = [('male', 'Male'),
                     ('female', 'Female'),
@@ -84,6 +85,11 @@ class HrEmployee(models.Model):
     joining_date = fields.Date(string='Joining Date', help="Employee joining date computed from the contract start date",compute='compute_joining', store=True)
     id_expiry_date = fields.Date(string='Expiry Date', help='Expiry date of Identification ID')
     passport_expiry_date = fields.Date(string='Expiry Date', help='Expiry date of Passport ID')
+
+    passport_expiry_date_hajri = fields.Char(string='Expiry Date Hajri',compute='_calculate_passport_hajri', help='Expiry date of Passport ID')
+    id_expiry_date_hajri = fields.Char(string='Expiry Date Hajri',compute='_calculate_id_hajri', help='Expiry date of Identification ID')
+
+
     id_attachment_id = fields.Many2many('ir.attachment', 'id_attachment_rel', 'id_ref', 'attach_ref',
                                         string="Attachment", help='You can attach the copy of your Id')
     passport_attachment_id = fields.Many2many('ir.attachment', 'passport_attachment_rel', 'passport_ref', 'attach_ref1',
@@ -113,6 +119,35 @@ class HrEmployee(models.Model):
             })
                               )
             self.fam_ids = [(6, 0, 0)] + lines_info
+
+    @api.depends('id_expiry_date')
+    def _calculate_id_hajri(self):
+        cal = Calverter()
+
+        if self.id_expiry_date:
+            d = self.id_expiry_date
+            jd = cal.gregorian_to_jd(d.year, d.month, d.day)
+            # print(jd)
+            # print(cal.jd_to_islamic(jd))
+            hj = cal.jd_to_islamic(jd)
+            # print(hj[0], "/", hj[1], "/", hj[2])
+            self.id_expiry_date_hajri =str( hj[2])+ "/"+ str(hj[1])+ "/"+str(hj[0])
+        else:
+            self.id_expiry_date_hajri =""
+
+    @api.depends('passport_expiry_date')
+    def _calculate_passport_hajri(self):
+        cal = Calverter()
+        if self.passport_expiry_date:
+            d = self.passport_expiry_date
+            jd = cal.gregorian_to_jd(d.year, d.month, d.day)
+            # print(jd)
+            # print(cal.jd_to_islamic(jd))
+            hj = cal.jd_to_islamic(jd)
+            # print(hj[0], "/", hj[1], "/", hj[2])
+            self.passport_expiry_date_hajri = str(hj[2]) + "/" + str(hj[1])+ "/" + str(hj[0])
+        else:
+            self.passport_expiry_date_hajri =""
 
 
 class EmployeeRelationInfo(models.Model):
