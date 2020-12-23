@@ -34,7 +34,7 @@ Payroll Analytic Account.
     'author': 'Konos',
     'website': 'http://konos.cl',
     'depends': [
-        'hr_payroll_account'
+        'hr_payroll_account','hr_work_entry'
     ],
     'data': [
         'views/hr_payroll_analytic_account_view.xml',
