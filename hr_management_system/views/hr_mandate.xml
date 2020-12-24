@@ -1,0 +1,97 @@
+<odoo>
+    <data>
+        <record id="mo_hr_mandate_view_form" model="ir.ui.view">
+            <field name="name">mo_hr_mandate_view_form</field>
+            <field name="model">hr.mandate</field>
+            <field name="arch" type="xml">
+                <form string="HR Mandates Form">
+                    
+                    <header>
+                        <button name="reject_action" states="draft"
+                                string="Reject" type="object"
+                                class="oe_highlight"
+                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <button name="approve_action" states="draft"
+                                string="Approve" type="object"
+                                class="oe_highlight"
+                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <button name="reset_action" states="reject,approve"
+                                string="Reset" type="object"
+                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,reject,approve"/>
+                    </header>
+                    
+                    <sheet>
+                        <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="emp_id"/>
+                            <field name="emp_job_id" force_save="1"/>
+                        </group>
+                        <group>
+                            <separator/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                        </group>
+                        </group>
+
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="mo_hr_mandate_view_tree" model="ir.ui.view">
+            <field name="name">mo_hr_mandate_view_tree</field>
+            <field name="model">hr.mandate</field>
+            <field name="arch" type="xml">
+                <tree string="HR Mandates Tree">
+                    <field name="name"/>
+                    <field name="emp_id"/>
+                    <field name="emp_job_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mo_hr_mandate_action" model="ir.actions.act_window">
+            <field name="name">Mandates</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.mandate</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+<!--        <record id="mo_hr_employee_form_view_mandate" model="ir.ui.view">-->
+<!--            <field name="name">mo.hr.employee.view.form.mandate</field>-->
+<!--            <field name="model">hr.employee</field>-->
+<!--            <field name="inherit_id" ref="hr.view_employee_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <div class="oe_button_box" position="inside">-->
+<!--                    <button class="oe_stat_button" name="document_view_mandate" type="object" icon="fa-file-o">-->
+<!--                        <field string="Mandates" name="document_count_mandate" widget="statinfo"/>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+        <menuitem id="menu_mo_hr_mandate"
+                  parent="hr_management_system.menu_hr_informations"
+                  name="Mandates"
+                  action="mo_hr_mandate_action"
+                  sequence="1"/>
+    </data>
+</odoo>

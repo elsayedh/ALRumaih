@@ -18,6 +18,96 @@ class HRContractInherit(models.Model):
     emp_job_data = fields.Char(_('Job Data'))
 
 
+    # train
+    def document_view_train(self):
+        self.ensure_one()
+        domain = [
+            ('emp_ref', '=', self.id)]
+
+        return {
+            'name': _('Trains'),
+            'domain': domain,
+            'res_model': 'hr.train',
+            'type': 'ir.actions.act_window',
+            'view_id': False,
+            'view_mode': 'tree,form',
+            'view_type': 'form',
+            'help': _('''<p class="oe_view_nocontent_create">
+                           Click To Create For New Records
+                        </p>'''),
+            'limit': 80,
+            'context': "{'default_emp_ref': '%s'}" % self.id,
+        }
+
+    def _document_count_train(self):
+        for each in self:
+            document_ids2 = self.env['hr.train'].sudo().search([('emp_ref', '=', each.id)])
+            each.document_count_train = len(document_ids2)
+            # print(document_ids2.emp_id.name)
+            # print(self.name)
+
+    document_count_train = fields.Integer(compute='_document_count_train', string='# Trains')
+
+    # insurance
+    def document_view_insurance(self):
+        self.ensure_one()
+        domain = [
+            ('emp_ref', '=', self.id)]
+
+        return {
+            'name': _('Medical Insurances'),
+            'domain': domain,
+            'res_model': 'hr.insurance',
+            'type': 'ir.actions.act_window',
+            'view_id': False,
+            'view_mode': 'tree,form',
+            'view_type': 'form',
+            'help': _('''<p class="oe_view_nocontent_create">
+                           Click To Create For New Records
+                        </p>'''),
+            'limit': 80,
+            'context': "{'default_emp_ref': '%s'}" % self.id,
+        }
+
+    def _document_count_insurance(self):
+        for each in self:
+            document_ids2 = self.env['hr.insurance'].sudo().search([('emp_ref', '=', each.id)])
+            each.document_count_insurance = len(document_ids2)
+            # print(document_ids2.emp_id.name)
+            # print(self.name)
+
+    document_count_insurance = fields.Integer(compute='_document_count_insurance', string='# Medical Insurance')
+
+    # protection
+    def document_view_protection(self):
+        self.ensure_one()
+        domain = [
+            ('emp_ref', '=', self.id)]
+
+        return {
+            'name': _('Protections'),
+            'domain': domain,
+            'res_model': 'hr.protection',
+            'type': 'ir.actions.act_window',
+            'view_id': False,
+            'view_mode': 'tree,form',
+            'view_type': 'form',
+            'help': _('''<p class="oe_view_nocontent_create">
+                           Click To Create For New Records
+                        </p>'''),
+            'limit': 80,
+            'context': "{'default_emp_ref': '%s'}" % self.id,
+        }
+
+    def _document_count_protection(self):
+        for each in self:
+            document_ids2 = self.env['hr.protection'].sudo().search([('emp_ref', '=', each.id)])
+            each.document_count_protection = len(document_ids2)
+            # print(document_ids2.emp_id.name)
+            # print(self.name)
+
+    document_count_protection = fields.Integer(compute='_document_count_protection', string='# Protections')
+
 
 class HRTimeOffInherit(models.Model):
     _inherit = 'hr.leave'
