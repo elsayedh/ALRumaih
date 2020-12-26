@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+	# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* hr_management_system
 #
@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-10 14:56+0000\n"
-"PO-Revision-Date: 2020-12-10 14:56+0000\n"
+"POT-Creation-Date: 2020-12-24 17:42+0000\n"
+"PO-Revision-Date: 2020-12-24 17:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,14 +16,316 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: hr_management_system
+#: code:addons/hr_management_system/models/hr_applicant.py:0
+#, python-format
+msgid ""
+"  Hello  ,<br>This is our job offer for you:  <br><br>And Our Salary Is: "
+msgstr ""
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_employee__document_count_insurance
+msgid "# Medical Insurance"
+msgstr "# التأمين الطبي"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_employee__document_count_protection
+msgid "# Protections"
+msgstr "# العُهَد"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_employee__document_count_train
+msgid "# Trains"
+msgstr "# تدريب"
+
+#. module: hr_management_system
+#: code:addons/hr_management_system/models/hr_employee.py:0
+#: code:addons/hr_management_system/models/hr_employee.py:0
+#: code:addons/hr_management_system/models/hr_employee.py:0
+#, python-format
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                           Click To Create For New Records\n"
+"                        </p>"
+msgstr ""
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_needaction
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_needaction
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_needaction
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_needaction
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_needaction
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_needaction
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_needaction
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__activity_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__activity_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__activity_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__activity_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__activity_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__activity_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__activity_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناءات النشاط"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__activity_state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__activity_state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__activity_state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__activity_state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__activity_state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__activity_state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__activity_state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__activity_type_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__activity_type_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__activity_type_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__activity_type_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__activity_type_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__activity_type_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__activity_type_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "نوع رمز النشاط"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_applicant
+msgid "Applicant"
+msgstr "المتقدم"
+
+#. module: hr_management_system
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_assign__state__approve
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_insurance__state__approve
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_mandate__state__approve
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_membership__state__approve
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_protection__state__approve
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_resignation__state__approve
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_ticket__state__approve
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_train__state__approve
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_assign_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_insurance_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_mandate_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_membership_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_protection_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_resignation_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_ticket_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_train_view_form
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__name
+msgid "Assign Type"
+msgstr "نوع التكليف"
+
+#. module: hr_management_system
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_assign_action
+#: model:ir.ui.menu,name:hr_management_system.menu_mo_hr_assign
+msgid "Assigns"
+msgstr "التكاليف"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_attachment_count
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_attachment_count
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_attachment_count
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_attachment_count
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_attachment_count
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_attachment_count
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_attachment_count
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__categ_id
+msgid "Category"
+msgstr "الفئة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_assign_type__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_insurance_category__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_membership_type__create_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_ticket_type__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_assign_type__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_insurance_category__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_membership_type__create_date
+#: model:ir.model.fields,field_description:hr_management_system.field_ticket_type__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__date_from
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__date_from
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__date_from
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__date_from
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__date_to
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__date_to
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__date_to
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__date_to
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__date_to
+msgid "Date To"
+msgstr "إلى تاريخ"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__emp_dt_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__emp_dt_manager_id
+msgid "Department Manager"
+msgstr "مدير القسم"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__description
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__description
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__description
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__description
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__description
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__description
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__description
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_assign_type__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_applicant__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__display_name
 #: model:ir.model.fields,field_description:hr_management_system.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_insurance_category__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_membership_type__display_name
+#: model:ir.model.fields,field_description:hr_management_system.field_ticket_type__display_name
 msgid "Display Name"
-msgstr "الإسم"
+msgstr "الاسم المعروض"
+
+#. module: hr_management_system
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_assign__state__draft
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_insurance__state__draft
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_mandate__state__draft
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_membership__state__draft
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_protection__state__draft
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_resignation__state__draft
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_ticket__state__draft
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_train__state__draft
+msgid "Draft"
+msgstr "مسودة"
 
 #. module: hr_management_system
 #: model:ir.model,name:hr_management_system.model_hr_employee
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__emp_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__emp_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__emp_ref
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__emp_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__emp_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__emp_ref
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__emp_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__emp_ref
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__emp_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__emp_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__emp_ref
 msgid "Employee"
 msgstr "الموظف"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_assign
+msgid "Employees Assigns"
+msgstr "تكاليف الموظفين"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_mandate
+msgid "Employees Mandates"
+msgstr "الإنتدابات"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_protection
+msgid "Employees Protections"
+msgstr "عُهد الموظفين"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_resignation
+msgid "Employees Resignations"
+msgstr "الإستقالات"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_ticket
+msgid "Employees Tickets"
+msgstr "تذاكر الموظفين"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_train
+msgid "Employees Trains"
+msgstr "تدريبات"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_insurance
+msgid "Employees insurances"
+msgstr "تأمينات الموظفين"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_membership
+msgid "Employees memberships"
+msgstr "العضويات"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__date_to
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__date_to
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__date_to
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
 
 #. module: hr_management_system
 #: code:addons/hr_management_system/models/hr_employee.py:0
@@ -33,9 +335,248 @@ msgid "Experience"
 msgstr "الخبرة"
 
 #. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_follower_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_follower_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_follower_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_follower_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_follower_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_follower_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_follower_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_channel_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_channel_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_channel_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_channel_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_channel_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_channel_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_channel_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "(المتابعون (القنوات"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_partner_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_partner_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_partner_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_partner_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_partner_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_partner_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_partner_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "(المتابعون (الشركاء"
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__activity_type_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__activity_type_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__activity_type_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__activity_type_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__activity_type_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__activity_type_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__activity_type_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_assign_view_form
+msgid "HR Assigns Form"
+msgstr "التكاليف"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_assign_view_tree
+msgid "HR Assigns Tree"
+msgstr "التكاليف"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_insurance_view_form
+msgid "HR Insurance Form"
+msgstr "التأمينات الطبية"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_insurance_view_tree
+msgid "HR Insurance Tree"
+msgstr "التأمينات الطبية"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_mandate_view_form
+msgid "HR Mandates Form"
+msgstr "الإنتدابات"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_mandate_view_tree
+msgid "HR Mandates Tree"
+msgstr "الإنتدابات"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_membership_view_form
+msgid "HR Memberships Form"
+msgstr "العضويات"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_membership_view_tree
+msgid "HR Memberships Tree"
+msgstr "العضويات"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_protection_view_form
+msgid "HR Protection Form"
+msgstr "العُهد"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_protection_view_tree
+msgid "HR Protection Tree"
+msgstr "العُهد"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_resignation_view_form
+msgid "HR Resignations Form"
+msgstr "الإستقالات"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_resignation_view_tree
+msgid "HR Resignations Tree"
+msgstr "الإستقالات"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_ticket_view_form
+msgid "HR Tickets Form"
+msgstr "التذاكر"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_ticket_view_tree
+msgid "HR Tickets Tree"
+msgstr "التذاكر"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_train_view_form
+msgid "HR Train Form"
+msgstr "التدريب"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_train_view_tree
+msgid "HR Train Tree"
+msgstr "التدريب"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_assign_type__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_applicant__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__id
 #: model:ir.model.fields,field_description:hr_management_system.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_leave__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__id
+#: model:ir.model.fields,field_description:hr_management_system.field_insurance_category__id
+#: model:ir.model.fields,field_description:hr_management_system.field_membership_type__id
+#: model:ir.model.fields,field_description:hr_management_system.field_ticket_type__id
 msgid "ID"
-msgstr "هوية شخصية"
+msgstr "المُعرف"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__activity_exception_icon
+msgid "Icon"
+msgstr "رمز"
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__activity_exception_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__activity_exception_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__activity_exception_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__activity_exception_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__activity_exception_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__activity_exception_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__activity_exception_icon
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "رمز للإشارة إلى نشاط استثناء."
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__message_needaction
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__message_unread
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__message_needaction
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__message_unread
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__message_needaction
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__message_unread
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__message_needaction
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__message_unread
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__message_needaction
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__message_unread
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__message_needaction
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__message_unread
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__message_needaction
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__message_unread
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__message_needaction
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد ذلك ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__message_has_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__message_has_sms_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__message_has_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__message_has_sms_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__message_has_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__message_has_sms_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__message_has_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__message_has_sms_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__message_has_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__message_has_sms_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__message_has_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__message_has_sms_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__message_has_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__message_has_sms_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__message_has_error
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: hr_management_system
+#: model:ir.ui.menu,name:hr_management_system.menu_hr_informations
+msgid "Informations"
+msgstr "بيانات الموظفين"
+
+#. module: hr_management_system
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_insurance_categ_action
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_insurance_categ_view_form
+msgid "Insurance Category"
+msgstr "فئة التأمين"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__name
+msgid "Insurance Name"
+msgstr "اسم التأمين"
+
+#. module: hr_management_system
+#: model:ir.ui.menu,name:hr_management_system.menu_mo_hr_insurance
+msgid "Insurances"
+msgstr "التأمينات"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_is_follower
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_is_follower
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_is_follower
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_is_follower
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_is_follower
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_is_follower
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_is_follower
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_is_follower
+msgid "Is Follower"
+msgstr "هو تابع"
 
 #. module: hr_management_system
 #: code:addons/hr_management_system/models/hr_employee.py:0
@@ -45,14 +586,112 @@ msgid "Job Data"
 msgstr "بيانات الوظيفة"
 
 #. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__emp_job_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__emp_job_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__emp_job_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__emp_job_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__emp_job_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__emp_job_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__emp_job_id
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: hr_management_system
 #: model:ir.model.fields,field_description:hr_management_system.field_hr_employee__emp_lang
 msgid "Language"
 msgstr "اللغة"
 
 #. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_assign_type____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_applicant____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign____last_update
 #: model:ir.model.fields,field_description:hr_management_system.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_insurance_category____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_membership_type____last_update
+#: model:ir.model.fields,field_description:hr_management_system.field_ticket_type____last_update
 msgid "Last Modified on"
 msgstr "آخر تعديل في"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_assign_type__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_insurance_category__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_membership_type__write_uid
+#: model:ir.model.fields,field_description:hr_management_system.field_ticket_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_assign_type__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_insurance_category__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_membership_type__write_date
+#: model:ir.model.fields,field_description:hr_management_system.field_ticket_type__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__emp_manager_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__emp_manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__name
+msgid "Mandate Name"
+msgstr "اسم الإنتداب"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__emp_id
+msgid "Mandated Employee"
+msgstr "الموظف المنتدب"
+
+#. module: hr_management_system
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_mandate_action
+#: model:ir.ui.menu,name:hr_management_system.menu_mo_hr_mandate
+msgid "Mandates"
+msgstr "الإنتدابات"
+
+#. module: hr_management_system
+#: code:addons/hr_management_system/models/hr_employee.py:0
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_insurance_action
+#, python-format
+msgid "Medical Insurances"
+msgstr "التأمين الطبي"
 
 #. module: hr_management_system
 #: code:addons/hr_management_system/models/hr_employee.py:0
@@ -62,14 +701,404 @@ msgid "Medical insurance number"
 msgstr "رقم التأمين الطبي"
 
 #. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__membership_claim
+msgid "Membership Entitlement"
+msgstr "استحقاق العضوية"
+
+#. module: hr_management_system
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_membership_type_action
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__name
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_membership_type_view_form
+msgid "Membership Type"
+msgstr "نوع العضوية"
+
+#. module: hr_management_system
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_membership_action
+#: model:ir.ui.menu,name:hr_management_system.menu_mo_hr_membership
+msgid "Memberships"
+msgstr "العضويات"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_has_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_has_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_has_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_has_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_has_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_has_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_has_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_assign_type__name
+#: model:ir.model.fields,field_description:hr_management_system.field_insurance_category__name
+#: model:ir.model.fields,field_description:hr_management_system.field_membership_type__name
+#: model:ir.model.fields,field_description:hr_management_system.field_ticket_type__name
+msgid "Name"
+msgstr "الإسم"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الحد الأقصى للنشاط التالي"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__activity_summary
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__activity_summary
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__activity_summary
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__activity_summary
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__activity_summary
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__activity_summary
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__activity_summary
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__activity_type_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__activity_type_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__activity_type_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__activity_type_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__activity_type_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__activity_type_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__activity_type_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__message_needaction_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__message_needaction_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__message_needaction_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__message_needaction_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__message_needaction_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__message_needaction_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__message_needaction_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__message_has_error_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__message_has_error_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__message_has_error_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__message_has_error_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__message_has_error_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__message_has_error_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__message_has_error_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__message_unread_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__message_unread_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__message_unread_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__message_unread_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__message_unread_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__message_unread_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__message_unread_counter
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_management_system
+#: code:addons/hr_management_system/models/hr_applicant.py:0
+#, python-format
+msgid "Our Job Offer"
+msgstr "عرض العمل الخاص بنا"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__name
+msgid "Protection Name"
+msgstr "اسم العهدة"
+
+#. module: hr_management_system
+#: code:addons/hr_management_system/models/hr_employee.py:0
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_protection_action
+#: model:ir.ui.menu,name:hr_management_system.menu_mo_hr_protection
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_employee_form_view_protection
+#, python-format
+msgid "Protections"
+msgstr "العُهد"
+
+#. module: hr_management_system
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_assign__state__reject
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_insurance__state__reject
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_mandate__state__reject
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_membership__state__reject
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_protection__state__reject
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_resignation__state__reject
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_ticket__state__reject
+#: model:ir.model.fields.selection,name:hr_management_system.selection__hr_train__state__reject
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_assign_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_insurance_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_mandate_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_membership_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_protection_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_resignation_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_ticket_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_train_view_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_assign_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_insurance_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_mandate_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_membership_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_protection_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_resignation_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_ticket_view_form
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_train_view_form
+msgid "Reset"
+msgstr "إعادة تعيين"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__name
+msgid "Resignation Name"
+msgstr "اسم الإستقالة"
+
+#. module: hr_management_system
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_resignation_action
+#: model:ir.ui.menu,name:hr_management_system.menu_mo_hr_resignation
+msgid "Resignations"
+msgstr "الإستقالات"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__activity_user_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__activity_user_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__activity_user_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__activity_user_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__activity_user_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__activity_user_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__activity_user_id
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__activity_user_id
+msgid "Responsible User"
+msgstr "مستخدم مسؤول"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__date_from
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__date_from
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__date_from
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__state
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__state
+msgid "State"
+msgstr "حالة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__activity_state
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__activity_state
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__activity_state
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__activity_state
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__activity_state
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__activity_state
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__activity_state
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__ticket_claim
+msgid "Ticket Entitlement"
+msgstr "استحقاق التذكرة"
+
+#. module: hr_management_system
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_ticket_type_action
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__name
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_ticket_type_view_form
+msgid "Ticket Type"
+msgstr "نوع التذكرة"
+
+#. module: hr_management_system
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_ticket_action
+#: model:ir.ui.menu,name:hr_management_system.menu_mo_hr_ticket
+msgid "Tickets"
+msgstr "التذاكر"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__name
+msgid "Train Name"
+msgstr "اسم التدريب"
+
+#. module: hr_management_system
+#: code:addons/hr_management_system/models/hr_employee.py:0
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_train_action
+#: model:ir.ui.menu,name:hr_management_system.menu_mo_hr_train
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_employee_form_view_train
+#, python-format
+msgid "Trains"
+msgstr "التدريبات"
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__activity_exception_decoration
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__activity_exception_decoration
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__activity_exception_decoration
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__activity_exception_decoration
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__activity_exception_decoration
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__activity_exception_decoration
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__activity_exception_decoration
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الإستثناء المسجل"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_unread
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_unread
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_unread
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_unread
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_unread
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_unread
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_unread
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__message_unread_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__message_unread_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__message_unread_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__message_unread_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__message_unread_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__message_unread_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__message_unread_counter
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hr_management_system
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_assign__website_message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_insurance__website_message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_mandate__website_message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_membership__website_message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_protection__website_message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_resignation__website_message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_ticket__website_message_ids
+#: model:ir.model.fields,field_description:hr_management_system.field_hr_train__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_management_system
+#: model:ir.model.fields,help:hr_management_system.field_hr_assign__website_message_ids
+#: model:ir.model.fields,help:hr_management_system.field_hr_insurance__website_message_ids
+#: model:ir.model.fields,help:hr_management_system.field_hr_mandate__website_message_ids
+#: model:ir.model.fields,help:hr_management_system.field_hr_membership__website_message_ids
+#: model:ir.model.fields,help:hr_management_system.field_hr_protection__website_message_ids
+#: model:ir.model.fields,help:hr_management_system.field_hr_resignation__website_message_ids
+#: model:ir.model.fields,help:hr_management_system.field_hr_ticket__website_message_ids
+#: model:ir.model.fields,help:hr_management_system.field_hr_train__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات الموقع"
+
+#. module: hr_management_system
 #: code:addons/hr_management_system/models/hr_employee.py:0
 #: model:ir.model.fields,field_description:hr_management_system.field_hr_employee__emp_date_start
 #, python-format
 msgid "Work Starting Date"
 msgstr "وقت بدء العمل"
 
-#. module: hr
-#: model:ir.model.fields,field_description:hr.field_hr_employee__km_home_work
-#: model:ir.model.fields,field_description:hr.field_res_users__km_home_work
-msgid "Home-Work Distance"
-msgstr "المسافة من المنزل لمكان العمل"
+#. module: hr_management_system
+#: model:ir.actions.act_window,name:hr_management_system.mo_hr_assign_type_action
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_assign_type_view_form
+msgid "assign Type"
+msgstr "نوع التكليف"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_assign_type
+msgid "assign.type"
+msgstr ""
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_insurance_category
+msgid "insurance.category"
+msgstr ""
+
+#. module: hr_management_system
+#: model_terms:ir.ui.view,arch_db:hr_management_system.mo_hr_employee_form_view_insurance
+msgid "insurances"
+msgstr "التأمينات"
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_membership_type
+msgid "membership.type"
+msgstr ""
+
+#. module: hr_management_system
+#: model:ir.model,name:hr_management_system.model_ticket_type
+msgid "ticket.type"
+msgstr ""

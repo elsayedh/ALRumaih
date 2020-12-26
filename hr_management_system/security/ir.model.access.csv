@@ -1,2 +1,13 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_management_system_hr_management_system,hr_management_system.hr_management_system,model_hr_management_system_hr_management_system,base.group_user,1,1,1,1
+access_hr_resignation,access_hr_resignation,model_hr_resignation,base.group_user,1,1,1,1
+access_hr_train,access_hr_train,model_hr_train,base.group_user,1,1,1,1
+access_hr_insurance,access_hr_insurance,model_hr_insurance,base.group_user,1,1,1,1
+access_insurance_category,access_insurance_category,model_insurance_category,base.group_user,1,1,1,1
+access_hr_protection,access_hr_protection,model_hr_protection,base.group_user,1,1,1,1
+access_hr_membership,access_hr_membership,model_hr_membership,base.group_user,1,1,1,1
+access_membership_type,access_membership_type,model_membership_type,base.group_user,1,1,1,1
+access_hr_mandate,access_hr_mandate,model_hr_mandate,base.group_user,1,1,1,1
+access_hr_ticket,access_hr_ticket,model_hr_ticket,base.group_user,1,1,1,1
+access_ticket_type,access_ticket_type,model_ticket_type,base.group_user,1,1,1,1
+access_hr_assign,access_hr_assign,model_hr_assign,base.group_user,1,1,1,1
+access_assign_type,access_assign_type,model_assign_type,base.group_user,1,1,1,1

@@ -20,14 +20,20 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'hr'],
+    'depends': ['base', 'hr','hr_recruitment'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',
         'views/hr_employee.xml',
+        'views/hr_resignation.xml',
+        'views/hr_train.xml',
+        'views/hr_insurance.xml',
+        'views/hr_protection.xml',
+        'views/hr_membership.xml',
+        'views/hr_mandate.xml',
+        'views/hr_ticket.xml',
+        'views/hr_assign.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

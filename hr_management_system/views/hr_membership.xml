@@ -1,0 +1,123 @@
+<odoo>
+    <data>
+
+        <record id="mo_hr_membership_type_view_form" model="ir.ui.view">
+            <field name="name">mo_hr_membership_type_view_form</field>
+            <field name="model">membership.type</field>
+            <field name="arch" type="xml">
+                <form string="Membership Type">
+                    <sheet>
+                    <group>
+                    <field name="name"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mo_hr_membership_type_action" model="ir.actions.act_window">
+            <field name="name">Membership Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">membership.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="mo_hr_membership_view_form" model="ir.ui.view">
+            <field name="name">mo_hr_membership_view_form</field>
+            <field name="model">hr.membership</field>
+            <field name="arch" type="xml">
+                <form string="HR Memberships Form">
+                    
+                    <header>
+                        <button name="reject_action" states="draft"
+                                string="Reject" type="object"
+                                class="oe_highlight"
+                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <button name="approve_action" states="draft"
+                                string="Approve" type="object"
+                                class="oe_highlight"
+                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <button name="reset_action" states="reject,approve"
+                                string="Reset" type="object"
+                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,reject,approve"/>
+                    </header>
+                    
+                    <sheet>
+                        <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="membership_claim"/>
+                            <separator/>
+                            <field name="emp_id"/>
+                            <field name="emp_job_id" force_save="1"/>
+                        </group>
+                        <group>
+                            <separator/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                        </group>
+                        </group>
+
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="mo_hr_membership_view_tree" model="ir.ui.view">
+            <field name="name">mo_hr_membership_view_tree</field>
+            <field name="model">hr.membership</field>
+            <field name="arch" type="xml">
+                <tree string="HR Memberships Tree">
+                    <field name="name"/>
+                    <field name="membership_claim"/>
+                    <field name="emp_id"/>
+                    <field name="emp_job_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mo_hr_membership_action" model="ir.actions.act_window">
+            <field name="name">Memberships</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.membership</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+<!--        <record id="mo_hr_employee_form_view_membership" model="ir.ui.view">-->
+<!--            <field name="name">mo.hr.employee.view.form.membership</field>-->
+<!--            <field name="model">hr.employee</field>-->
+<!--            <field name="inherit_id" ref="hr.view_employee_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <div class="oe_button_box" position="inside">-->
+<!--                    <button class="oe_stat_button" name="document_view_membership" type="object" icon="fa-file-o">-->
+<!--                        <field string="memberships" name="document_count_membership" widget="statinfo"/>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+        <menuitem id="menu_mo_hr_membership"
+                  parent="hr_management_system.menu_hr_informations"
+                  name="Memberships"
+                  action="mo_hr_membership_action"
+                  sequence="1"/>
+    </data>
+</odoo>

@@ -2,6 +2,27 @@
 
 <odoo>
 
+<!--    <record id="restrict_employee" model="ir.rule">-->
+<!--        <field name="name">Restrict Employee</field>-->
+<!--        <field ref="hr.model_hr_employee" name="model_id"/>-->
+<!--        <field name="domain_force"> ['|',('user_id','=',user.id),('parent_id.user_id.id', '=', user.id)] </field>-->
+<!--        <field name="groups" eval="[(4, ref('base.group_user'))]"/>-->
+<!--    </record>-->
+
+<!--    <record id="remove_restriction" model="ir.rule">-->
+<!--        <field name="name">Remove Restriction</field>-->
+<!--        <field ref="hr.model_hr_employee" name="model_id"/>-->
+<!--        <field name="domain_force">[]</field>-->
+<!--        <field name="groups" eval="[(4, ref('base.group_user'))]"/>-->
+<!--    </record>-->
+
+<!--    <record id="employee_restriction_department" model="ir.rule">-->
+<!--        <field name="name">Employee Restriction Department Manager</field>-->
+<!--        <field ref="hr.model_hr_employee" name="model_id"/>-->
+<!--        <field name="domain_force"> ['|',('user_id','=',user.id),('department_id.manager_id.user_id.id', '=', user.id)] </field>-->
+<!--        <field name="groups" eval="[(4, ref('base.group_user'))]"/>-->
+<!--    </record>-->
+
     <record id="hr_employee_form_view_inherit" model="ir.ui.view">
         <field name="name">hr.employee.view.form.inherit</field>
         <field name="model">hr.employee</field>
@@ -24,6 +45,11 @@
             </xpath>
         </field>
     </record>
+
+    <menuitem id="menu_hr_informations"
+              parent="hr.menu_human_resources_configuration"
+              name="Informations" sequence="110"/>
+
 
 
 </odoo>

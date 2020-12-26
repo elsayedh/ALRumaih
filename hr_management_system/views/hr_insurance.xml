@@ -1,0 +1,118 @@
+<odoo>
+    <data>
+        <record id="mo_hr_insurance_categ_view_form" model="ir.ui.view">
+            <field name="name">mo_hr_insurance_categ_view_form</field>
+            <field name="model">insurance.category</field>
+            <field name="arch" type="xml">
+                <form string="Insurance Category">
+                    <sheet>
+                    <group>
+                    <field name="name"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mo_hr_insurance_categ_action" model="ir.actions.act_window">
+            <field name="name">Insurance Category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">insurance.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="mo_hr_insurance_view_form" model="ir.ui.view">
+            <field name="name">mo_hr_insurance_view_form</field>
+            <field name="model">hr.insurance</field>
+            <field name="arch" type="xml">
+                <form string="HR Insurance Form">
+                    
+                    <header>
+                        <button name="reject_action" states="draft"
+                                string="Reject" type="object"
+                                class="oe_highlight"
+                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <button name="approve_action" states="draft"
+                                string="Approve" type="object"
+                                class="oe_highlight"
+                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <button name="reset_action" states="reject,approve"
+                                string="Reset" type="object"
+                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,reject,approve"/>
+                    </header>
+                    
+                    <sheet>
+                        <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="emp_id"/>
+                        </group>
+                        <group>
+                            <separator/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <separator/>
+                            <field name="categ_id"/>
+                        </group>
+                        </group>
+
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="mo_hr_insurance_view_tree" model="ir.ui.view">
+            <field name="name">mo_hr_insurance_view_tree</field>
+            <field name="model">hr.insurance</field>
+            <field name="arch" type="xml">
+                <tree string="HR Insurance Tree">
+                    <field name="name"/>
+                    <field name="emp_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mo_hr_insurance_action" model="ir.actions.act_window">
+            <field name="name">Medical Insurances</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.insurance</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="mo_hr_employee_form_view_insurance" model="ir.ui.view">
+            <field name="name">mo.hr.employee.view.form.insurance</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <div class="oe_button_box" position="inside">
+                    <button class="oe_stat_button" name="document_view_insurance" type="object" icon="fa-heartbeat">
+                        <field string="insurances" name="document_count_insurance" widget="statinfo"/>
+                    </button>
+                </div>
+            </field>
+        </record>
+
+
+        <menuitem id="menu_mo_hr_insurance"
+                  parent="hr_management_system.menu_hr_informations"
+                  name="Insurances"
+                  action="mo_hr_insurance_action"
+                  sequence="2"/>
+    </data>
+</odoo>
