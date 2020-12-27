@@ -32,16 +32,16 @@
                         <button name="reject_action" states="draft"
                                 string="Reject" type="object"
                                 class="oe_highlight"
-                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+                        groups="hr.group_hr_manager,hr_management_system.group_hr_manager_demo"/>
 
                         <button name="approve_action" states="draft"
                                 string="Approve" type="object"
                                 class="oe_highlight"
-                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+                        groups="hr.group_hr_manager,hr_management_system.group_hr_manager_demo"/>
 
                         <button name="reset_action" states="reject,approve"
                                 string="Reset" type="object"
-                        groups="hr.group_hr_manager,hr.group_hr_user"/>
+                        groups="hr.group_hr_manager,hr_management_system.group_hr_manager_demo"/>
 
                         <field name="state" widget="statusbar" statusbar_visible="draft,reject,approve"/>
                     </header>
