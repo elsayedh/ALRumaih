@@ -9,15 +9,14 @@ class HRResignation(models.Model):
 
     # dt = Department
     # emp = Employee
-    emp_ref = fields.Many2one('hr.employee', related='emp_id', invisible=1, copy=False)
 
     name = fields.Char('Resignation Name')
     emp_id = fields.Many2one('hr.employee', required=True, string="Employee")
-    emp_job_id = fields.Many2one('hr.job', readonly=True, string="Job Position")
-    emp_manager_id = fields.Many2one('hr.employee', readonly=True, string="Manager")
+    emp_job_id = fields.Many2one('hr.job', compute="_compute_employee", store=True, readonly=True, string="Job Position")
+    emp_manager_id = fields.Many2one('hr.employee', compute="_compute_employee", store=True, readonly=True, string="Manager")
 
-    emp_dt_id = fields.Many2one('hr.department', readonly=True, string="Department")
-    emp_dt_manager_id = fields.Many2one('hr.employee', readonly=True, string="Department Manager")
+    emp_dt_id = fields.Many2one('hr.department', compute="_compute_employee", store=True, readonly=True, string="Department")
+    emp_dt_manager_id = fields.Many2one('hr.employee', compute="_compute_employee", store=True, readonly=True, string="Department Manager")
     date_from = fields.Date("Date From", default=datetime.now())
     date_to = fields.Date("Date To")
 
@@ -25,28 +24,15 @@ class HRResignation(models.Model):
 
     state = fields.Selection([('draft','Draft'),('reject','Reject'),('approve','Approve')], default='draft')
 
-    @api.onchange('emp_id')
-    def emp_details(self):
-        # Job Position
-        if self.emp_id.job_id:
-            self.emp_job_id = self.emp_id.job_id
-        else:
-            self.emp_job_id = False
-        # Manager
-        if self.emp_id.parent_id:
-            self.emp_manager_id = self.emp_id.parent_id
-        else:
-            self.emp_manager_id = False
-        # Department
-        if self.emp_id.department_id:
-            self.emp_dt_id = self.emp_id.department_id
-        else:
-            self.emp_dt_id = False
-        # Department Manager
-        if self.emp_id.department_id.manager_id:
-            self.emp_dt_manager_id = self.emp_id.department_id.manager_id
-        else:
-            self.emp_dt_manager_id = False
+
+    @api.depends('emp_id')
+    def _compute_employee(self):
+        for i in self.filtered('emp_id'):
+            i.emp_job_id = i.emp_id.job_id
+            i.emp_manager_id = i.emp_id.parent_id
+            i.emp_dt_id = i.emp_id.department_id
+            i.emp_dt_manager_id = i.emp_id.department_id.manager_id
+
 
 
     def reject_action(self):

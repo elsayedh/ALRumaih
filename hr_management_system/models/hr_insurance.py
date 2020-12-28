@@ -10,8 +10,6 @@ class HRInsurance(models.Model):
     # dt = Department
     # emp = Employee
 
-    emp_ref = fields.Many2one('hr.employee', related='emp_id', invisible=1, copy=False)
-
     name = fields.Char('Insurance Name')
     emp_id = fields.Many2one('hr.employee', required=True, string="Employee")
 

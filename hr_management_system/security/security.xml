@@ -6,7 +6,7 @@
     <record id="group_hr_manager_demo" model="res.groups">
         <field name="name">Employees Manager</field>
         <field name="category_id" ref="base.module_category_human_resources_employees"/>
-        <field name="implied_ids" eval="[(4, ref('hr.group_hr_user'))]"/>
+        <field name="implied_ids" eval="[(4, ref('hr.group_hr_manager'))]"/>
     </record>
 
     <record id="restrict_employee" model="ir.rule">

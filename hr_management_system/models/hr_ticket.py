@@ -9,7 +9,6 @@ class HRTicket(models.Model):
 
     # dt = Department
     # emp = Employee
-    # emp_ref = fields.Many2one('hr.employee', related='emp_id', invisible=1, copy=False)
 
     name = fields.Many2one('ticket.type', string="Ticket Type")
     ticket_claim = fields.Float('Ticket Entitlement')

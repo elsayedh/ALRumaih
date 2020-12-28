@@ -10,3 +10,4 @@ from . import hr_membership
 from . import hr_mandate
 from . import hr_ticket
 from . import hr_assign
+from . import hr_contract_inherit

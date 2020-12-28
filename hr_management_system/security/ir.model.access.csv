@@ -11,3 +11,4 @@ access_hr_ticket,access_hr_ticket,model_hr_ticket,base.group_user,1,1,1,1
 access_ticket_type,access_ticket_type,model_ticket_type,base.group_user,1,1,1,1
 access_hr_assign,access_hr_assign,model_hr_assign,base.group_user,1,1,1,1
 access_assign_type,access_assign_type,model_assign_type,base.group_user,1,1,1,1
+access_hr_contract_document,access_hr_contract_document,model_hr_contract_document,base.group_user,1,1,1,1

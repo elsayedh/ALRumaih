@@ -4,7 +4,7 @@ from odoo import api, fields, models, _
 from dateutil.parser import parse
 
 
-class HRContractInherit(models.Model):
+class HrSystemEmployee(models.Model):
     _inherit = 'hr.employee'
 
     @api.model
@@ -22,7 +22,7 @@ class HRContractInherit(models.Model):
     def document_view_train(self):
         self.ensure_one()
         domain = [
-            ('emp_ref', '=', self.id)]
+            ('emp_id', '=', self.id)]
 
         return {
             'name': _('Trains'),
@@ -36,12 +36,12 @@ class HRContractInherit(models.Model):
                            Click To Create For New Records
                         </p>'''),
             'limit': 80,
-            'context': "{'default_emp_ref': '%s'}" % self.id,
+            'context': "{'default_emp_id': %s}" % self.id
         }
 
     def _document_count_train(self):
         for each in self:
-            document_ids2 = self.env['hr.train'].sudo().search([('emp_ref', '=', each.id)])
+            document_ids2 = self.env['hr.train'].sudo().search([('emp_id', '=', each.id)])
             each.document_count_train = len(document_ids2)
             # print(document_ids2.emp_id.name)
             # print(self.name)
@@ -52,7 +52,7 @@ class HRContractInherit(models.Model):
     def document_view_insurance(self):
         self.ensure_one()
         domain = [
-            ('emp_ref', '=', self.id)]
+            ('emp_id', '=', self.id)]
 
         return {
             'name': _('Medical Insurances'),
@@ -66,12 +66,12 @@ class HRContractInherit(models.Model):
                            Click To Create For New Records
                         </p>'''),
             'limit': 80,
-            'context': "{'default_emp_ref': '%s'}" % self.id,
+            'context': "{'default_emp_id': %s}" % self.id,
         }
 
     def _document_count_insurance(self):
         for each in self:
-            document_ids2 = self.env['hr.insurance'].sudo().search([('emp_ref', '=', each.id)])
+            document_ids2 = self.env['hr.insurance'].sudo().search([('emp_id', '=', each.id)])
             each.document_count_insurance = len(document_ids2)
             # print(document_ids2.emp_id.name)
             # print(self.name)
@@ -82,7 +82,7 @@ class HRContractInherit(models.Model):
     def document_view_protection(self):
         self.ensure_one()
         domain = [
-            ('emp_ref', '=', self.id)]
+            ('emp_id', '=', self.id)]
 
         return {
             'name': _('Protections'),
@@ -96,12 +96,12 @@ class HRContractInherit(models.Model):
                            Click To Create For New Records
                         </p>'''),
             'limit': 80,
-            'context': "{'default_emp_ref': '%s'}" % self.id,
+            'context': "{'default_emp_id': %s}" % self.id,
         }
 
     def _document_count_protection(self):
         for each in self:
-            document_ids2 = self.env['hr.protection'].sudo().search([('emp_ref', '=', each.id)])
+            document_ids2 = self.env['hr.protection'].sudo().search([('emp_id', '=', each.id)])
             each.document_count_protection = len(document_ids2)
             # print(document_ids2.emp_id.name)
             # print(self.name)

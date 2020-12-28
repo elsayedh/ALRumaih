@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'hr','hr_recruitment'],
+    'depends': ['base', 'hr','hr_recruitment','hr_contract'],
 
     # always loaded
     'data': [
@@ -35,6 +35,7 @@
         'views/hr_mandate.xml',
         'views/hr_ticket.xml',
         'views/hr_assign.xml',
+        'views/hr_contract_inherit.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
