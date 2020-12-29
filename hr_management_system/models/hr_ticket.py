@@ -15,6 +15,8 @@ class HRTicket(models.Model):
     emp_id = fields.Many2one('hr.employee', required=True, string="Employee")
     emp_job_id = fields.Many2one('hr.job', readonly=True, string="Job Position")
 
+    doc_attachment_id08 = fields.Many2many('ir.attachment', 'doc_attach_rel08', 'doc_id08','attach_id08', string="Attachment", copy=False)
+
     date_from = fields.Date("Date From", default=datetime.now())
     date_to = fields.Date("Date To")
 
@@ -44,3 +46,11 @@ class HRTicketType(models.Model):
     _name = 'ticket.type'
 
     name = fields.Char("Name")
+
+
+class HrTicketAttachment(models.Model):
+    _inherit = 'ir.attachment'
+
+    doc_attach_rel08 = fields.Many2many('hr.ticket', 'doc_attachment_id08', 'attach_id08', 'doc_id08',
+                                        string="Attachment", invisible=1)
+

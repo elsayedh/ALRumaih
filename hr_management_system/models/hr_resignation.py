@@ -15,6 +15,8 @@ class HRResignation(models.Model):
     emp_job_id = fields.Many2one('hr.job', compute="_compute_employee", store=True, readonly=True, string="Job Position")
     emp_manager_id = fields.Many2one('hr.employee', compute="_compute_employee", store=True, readonly=True, string="Manager")
 
+    doc_attachment_id07 = fields.Many2many('ir.attachment', 'doc_attach_rel07', 'doc_id07','attach_id07', string="Attachment", copy=False)
+
     emp_dt_id = fields.Many2one('hr.department', compute="_compute_employee", store=True, readonly=True, string="Department")
     emp_dt_manager_id = fields.Many2one('hr.employee', compute="_compute_employee", store=True, readonly=True, string="Department Manager")
     date_from = fields.Date("Date From", default=datetime.now())
@@ -43,4 +45,11 @@ class HRResignation(models.Model):
 
     def reset_action(self):
         return self.write({'state': 'draft'})
+
+
+class HrResignationAttachment(models.Model):
+    _inherit = 'ir.attachment'
+
+    doc_attach_rel07 = fields.Many2many('hr.resignation', 'doc_attachment_id07', 'attach_id07', 'doc_id07',
+                                        string="Attachment", invisible=1)
 

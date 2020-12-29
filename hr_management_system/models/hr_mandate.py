@@ -14,6 +14,8 @@ class HRMandate(models.Model):
     emp_id = fields.Many2one('hr.employee', required=True, string="Mandated Employee")
     emp_job_id = fields.Many2one('hr.job', compute="_compute_employee", store=True, readonly=True, string="Job Position")
 
+    doc_attachment_id04 = fields.Many2many('ir.attachment', 'doc_attach_rel04', 'doc_id04','attach_id04', string="Attachment", copy=False)
+
     date_from = fields.Date("Date From", default=datetime.now())
     date_to = fields.Date("Date To")
 
@@ -36,4 +38,11 @@ class HRMandate(models.Model):
 
     def reset_action(self):
         return self.write({'state': 'draft'})
+
+
+class HrMandateAttachment(models.Model):
+    _inherit = 'ir.attachment'
+
+    doc_attach_rel04 = fields.Many2many('hr.mandate', 'doc_attachment_id04', 'attach_id04', 'doc_id04',
+                                        string="Attachment", invisible=1)
 

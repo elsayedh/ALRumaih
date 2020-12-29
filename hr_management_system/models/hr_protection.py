@@ -13,6 +13,9 @@ class HRProtection(models.Model):
     name = fields.Char('Protection Name')
     emp_id = fields.Many2one('hr.employee', required=True, string="Employee")
     emp_job_id = fields.Many2one('hr.job', compute="_compute_employee", store=True, readonly=True, string="Job Position")
+
+    doc_attachment_id06 = fields.Many2many('ir.attachment', 'doc_attach_rel06', 'doc_id06','attach_id06', string="Attachment", copy=False)
+
     date_from = fields.Date("Start Date", default=datetime.now())
     date_to = fields.Date("End Date")
 
@@ -36,3 +39,11 @@ class HRProtection(models.Model):
 
     def reset_action(self):
         return self.write({'state': 'draft'})
+
+
+class HrProtectionAttachment(models.Model):
+    _inherit = 'ir.attachment'
+
+    doc_attach_rel06 = fields.Many2many('hr.protection', 'doc_attachment_id06', 'attach_id06', 'doc_id06',
+                                        string="Attachment", invisible=1)
+

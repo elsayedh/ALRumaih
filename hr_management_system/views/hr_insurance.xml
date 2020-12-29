@@ -50,6 +50,7 @@
                         <group>
                             <field name="name"/>
                             <field name="emp_id"/>
+                            <field name="doc_attachment_id03" widget="many2many_binary" class="oe_inline"/>
                         </group>
                         <group>
                             <separator/>

@@ -13,6 +13,8 @@ class HRInsurance(models.Model):
     name = fields.Char('Insurance Name')
     emp_id = fields.Many2one('hr.employee', required=True, string="Employee")
 
+    doc_attachment_id03 = fields.Many2many('ir.attachment', 'doc_attach_rel03', 'doc_id03','attach_id03', string="Attachment", copy=False)
+
     date_from = fields.Date("Start Date", default=datetime.now())
     date_to = fields.Date("End Date")
 
@@ -37,3 +39,11 @@ class HRInsuranceCategoery(models.Model):
     _name = 'insurance.category'
 
     name = fields.Char('Name')
+
+
+class HrInsuranceAttachment(models.Model):
+    _inherit = 'ir.attachment'
+
+    doc_attach_rel03 = fields.Many2many('hr.insurance', 'doc_attachment_id03', 'attach_id03', 'doc_id03',
+                                        string="Attachment", invisible=1)
+

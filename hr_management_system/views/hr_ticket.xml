@@ -60,6 +60,7 @@
                             <separator/>
                             <field name="date_from"/>
                             <field name="date_to"/>
+                            <field name="doc_attachment_id08" widget="many2many_binary" class="oe_inline"/>
                         </group>
                         </group>
 

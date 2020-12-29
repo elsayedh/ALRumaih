@@ -14,6 +14,9 @@ class HRAssign(models.Model):
     emp_id = fields.Many2one('hr.employee', required=True, string="Employee")
     emp_job_id = fields.Many2one('hr.job', compute="_compute_employee", store=True, readonly=True, string="Job Position")
 
+    doc_attachment_id02 = fields.Many2many('ir.attachment', 'doc_attach_rel02', 'doc_id02','attach_id02', string="Attachment", copy=False)
+
+
     date_from = fields.Date("Date From", default=datetime.now())
     date_to = fields.Date("Date To")
 
@@ -41,3 +44,10 @@ class HRAssignType(models.Model):
     _name = 'assign.type'
 
     name = fields.Char("Name")
+
+class HrAssignAttachment(models.Model):
+    _inherit = 'ir.attachment'
+
+    doc_attach_rel02 = fields.Many2many('hr.assign', 'doc_attachment_id02', 'attach_id02', 'doc_id02',
+                                        string="Attachment", invisible=1)
+

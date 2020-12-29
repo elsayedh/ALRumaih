@@ -15,6 +15,8 @@ class HRMembership(models.Model):
     emp_id = fields.Many2one('hr.employee', required=True, string="Employee")
     emp_job_id = fields.Many2one('hr.job', compute="_compute_employee", store=True, readonly=True, string="Job Position")
 
+    doc_attachment_id05 = fields.Many2many('ir.attachment', 'doc_attach_rel05', 'doc_id05','attach_id05', string="Attachment", copy=False)
+
     date_from = fields.Date("Date From", default=datetime.now())
     date_to = fields.Date("Date To")
 
@@ -44,3 +46,11 @@ class HRMembershipType(models.Model):
     _name = 'membership.type'
 
     name = fields.Char("Name")
+
+
+class HrMembershipAttachment(models.Model):
+    _inherit = 'ir.attachment'
+
+    doc_attach_rel05 = fields.Many2many('hr.membership', 'doc_attachment_id05', 'attach_id05', 'doc_id05',
+                                        string="Attachment", invisible=1)
+

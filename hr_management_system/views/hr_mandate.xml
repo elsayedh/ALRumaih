@@ -30,6 +30,7 @@
                             <field name="name"/>
                             <field name="emp_id"/>
                             <field name="emp_job_id" force_save="1"/>
+                            <field name="doc_attachment_id04" widget="many2many_binary" class="oe_inline"/>
                         </group>
                         <group>
                             <separator/>
