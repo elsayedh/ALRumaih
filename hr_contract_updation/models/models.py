@@ -32,6 +32,7 @@ class HrContract(models.Model):
     da = fields.Monetary(string="DA", help="Dearness allowance")
     meal_allowance = fields.Monetary(string="Meal Allowance", help="Meal allowance")
     medical_allowance = fields.Monetary(string="Medical Allowance", help="Medical allowance")
+    insurances = fields.Monetary(string="Insurances", help="Insurances")
     other_allowance = fields.Monetary(string="Other Allowance", help="Other allowances")
 
     def get_all_structures(self):
